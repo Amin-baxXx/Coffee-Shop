@@ -1,0 +1,26 @@
+# پوشه‌های سیستمی و محیط‌های توسعه
+.DS_Store
+Thumbs.db
+.idea/         # برای WebStorm و IntelliJ
+.vscode/       # برای VS Code
+node_modules/  # پوشه پکیج‌های npm
+dist/          # خروجی Build (مثلاً Webpack یا Vite)
+out/           # خروجی‌های موقت
+node_modules
+# فایل‌های پیکربندی
+*.log          # فایل‌های لاگ
+*.env          # متغیرهای محیطی (حاوی اطلاعات حساس مثل API Keys)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json # در برخی پروژه‌ها نیازی به کامیت نیست (بسته به نیازت)
+
+# پوشه‌های کش و وابستگی‌های موقت
+.cache/
+.temp/
+coverage/      # خروجی تست‌های Jest یا Cypress
+
+# فایل‌های مربوط به macOS
+*.swp
+*.swo
+*.swn
