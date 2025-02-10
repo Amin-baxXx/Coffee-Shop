@@ -4,7 +4,7 @@
   font-family: "Dana";
   src:
     local("Dana"),
-    url("../public/fonts/Dana/woff2/DanaFaNum-DemiBold.woff2") format("woff2");
+    url("../public/fonts/Dana/woff2/DanaFaNum-Regular.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
@@ -42,8 +42,27 @@
     url("../public/fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
   font-display: swap;
 }
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  background-image: url("../public/images/background-image/headerBgDesktop.png");
+}
+
+@layer utilities {
+  .child {
+    @apply duration-200 ease-out;
+  }
+  .child > * {
+    @apply inline-block duration-200 ease-out;
+  }
+  .child > *:hover {
+    @apply text-orange-300;
+  }
+}
+.hight {
+}
 @theme {
-  /*--font-display: "Dana", "sans-serif";*/
+  /* For Light And Dark Mode */
   /*Custom Colors*/
   --color-brown-100: #ece0d1;
   --color-brown-300: #dbc1ac;
@@ -60,5 +79,7 @@
   --font-Morabba-Light: "Morabba Light";
   --font-Morabba-Medium: "Morabba Medium";
   --font-Morabba-Bold: "Morabba Bold";
+  /*Letter Spacing Custom*/
+  --tracking-1: -0.0065em;
   /* ... */
 }
