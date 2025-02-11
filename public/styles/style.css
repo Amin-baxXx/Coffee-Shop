@@ -74,7 +74,9 @@ body {
 }
 .hight {
 }
+
 @theme {
+  --breakpoint-5xl: 72rem !important;
   /* For Light And Dark Mode */
   /*Custom Colors*/
   --color-brown-100: #ece0d1;
