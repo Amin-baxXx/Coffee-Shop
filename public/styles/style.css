@@ -47,10 +47,23 @@
 body {
   background-image: url("../public/images/background-image/headerBgDesktop.png");
 }
-
+.nigga {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: 150ms ease-in-out;
+}
+.have-hover:hover + .nigga {
+  transition-delay: 75ms;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.nigga:hover {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
 @layer utilities {
   .child {
-    @apply duration-200 ease-out;
+    @apply delay-85 duration-200 ease-out;
   }
   .child > * {
     @apply inline-block duration-200 ease-out;
