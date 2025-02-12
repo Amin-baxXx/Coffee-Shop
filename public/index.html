@@ -419,8 +419,8 @@
       </div>
       <!--  Menu Bar      -->
       <div
-        id="modal"
-        class="transition-transform fixed top-0 right-0 bottom-0 w-64 min-h-screen bg-white dark:bg-zinc-700 z-40 p-4"
+        id=""
+        class="modal transition-transform fixed top-0 right-0 bottom-0 w-70 min-h-screen bg-white dark:bg-zinc-700 z-40 p-4"
       >
         <div class="flex justify-between items-center">
           <svg class="h-10 w-10 text-orange-300"><use href="#logo"></use></svg>
@@ -441,20 +441,20 @@
             <svg class="w-6 h-6"><use href="#home"></use></svg>
             <a class="text-base font-Dana mt-1.5" href="#">صفحه اصلی</a>
           </li>
-          <li class="group open-submenu">
+          <li class="group transition-all open-sub-menu">
             <div
               class="cursor-pointer group flex gap-x-2 hover:bg-orange-200/20 hover:text-orange-300 w-full transition-colors items-center p-4 rounded-md h-10"
             >
               <svg class="w-6 h-6"><use href="#shop"></use></svg>
               <a class="text-base font-Dana mt-1.5" href="#">فروشگاه</a>
               <svg
-                class="w-4 h-4 text-zinc-700 mr-22 group-hover:rotate-180 transition-transform dark:text-white"
+                class="w-4 h-4 text-zinc-700 mr-25 arrow-rotate transition-transform dark:text-white"
               >
                 <use href="#arrow-down"></use>
               </svg>
             </div>
             <div
-              class="transition-all hidden group-hover:opacity-100 group-hover:visible group-hover:flex flex-col gap-y-5 p-8 pt-5 pb-2"
+              class="transition-all scale-y-0 sub-menu h-0 opacity-0 delay-75 invisible flex flex-col pr-8"
             >
               <a class="hover:text-orange-300" href="#">قهوه ویژه</a>
               <a class="hover:text-orange-300" href="#"> ویژه در سطح جهانی </a>
@@ -500,7 +500,7 @@
             <a class="text-base font-Dana mt-0.5" href="#"> ورود | ثبت‌نام</a>
           </li>
           <li
-            class="flex gap-x-2 p-3 hover:bg-orange-200/20 transition-colors text-orange-300 items-center w-full rounded-md h-10"
+            class="clicker cursor-pointer flex gap-x-2 p-3 hover:bg-orange-200/20 transition-colors text-orange-300 items-center w-full rounded-md h-10"
           >
             <svg class="w-6 h-6 cursor-pointer dark-mode">
               <use data-set="theme" xlink:href="#moon"></use>
@@ -510,7 +510,7 @@
             >
           </li>
           <li
-            class="flex gap-x-2 p-3 hover:bg-orange-200/20 transition-colors text-orange-300 items-center w-full rounded-md h-10"
+            class="flex gap-x-2 p-3 cursor-pointer shoping-redirect hover:bg-orange-200/20 transition-colors text-orange-300 items-center w-full rounded-md h-10"
           >
             <svg class="w-6 h-6">
               <use xlink:href="#shopping-cart"></use>
@@ -527,11 +527,78 @@
       </div>
       <!--    Cart Icon    -->
       <div>
-        <svg class="w-6 h-6 text-zinc-700 dark:text-white">
+        <svg
+          class="shopping-open w-6 h-6 text-zinc-700 dark:text-white cursor-pointer"
+        >
           <use href="#shopping-cart"></use>
         </svg>
       </div>
+      <div
+        class="shopping-close transition-transform fixed top-0 -left-70 pt-6 bottom-0 w-70 min-h-screen bg-white dark:bg-zinc-700 z-40 p-4"
+      >
+        <div class="flex justify-between items-center">
+          <svg
+            class="h-6 w-6 dark:text-white text-zinc-700 shopping-icon cursor-pointer"
+          >
+            <use href="#close-icon"></use>
+          </svg>
+          <p class="text-lg font-Dana dark:text-white text-gray-300">
+            سبد خرید
+          </p>
+        </div>
+        <hr class="border-gray-300 dark:border-white/10 mt-6 mb-5" />
+        <div class="flex gap-x-2.5 mt-5">
+          <img
+            class="h-25 w-25"
+            src="./images/CoffeeShop-Files/products/p2.png"
+            alt="It Doesn't Matter Who You Are it matter Our Plan 🦇"
+          />
+
+          <!--  Cart body -->
+          <div class="flex flex-col justify-between">
+            <h4
+              class="font-Dana-Medium text-zinc-700 dark:text-white lg:text-base text-[15px] line-clamp-3"
+            >
+              قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+            </h4>
+            <div>
+              <span
+                class="text-green-600 dark:text-emerald-500 text-sm tracking-tighter"
+                >14.500 تومان تخفیف</span
+              >
+              <div class="text-zinc-700 dark:text-white text-sm font-Dana">
+                <span class="lg:text-xl text-lg font-Dana-DemiBold"
+                  >175,000
+                </span>
+                تومان
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="border-gray-300 dark:border-white/10 mt-6 mb-5" />
+        <div
+          class="flex flex-row-reverse justify-between gap-x-5 h-[74%] items-end"
+        >
+          <div class="flex flex-col gap-y-2">
+            <span class="text-xs text-gray-300">مبلغ قابل پرداخت</span>
+            <div
+              class="flex items-center gap-x-1 mt-0.5 text-zinc-700 dark:text-white text-sm font-Dana"
+            >
+              <span class="lg:text-xl text-lg font-Dana-DemiBold"
+                >175,000
+              </span>
+              تومان
+            </div>
+          </div>
+          <button
+            class="text-center bg-teal-600 hover:bg-teal-700 dark:bg-emerald-600 transition-colors text-white w-[144px] h-14 text-xl tracking-tighter cursor-pointer rounded-xl"
+          >
+            <span class="leading-[56px]">ثبت سفارش</span>
+          </button>
+        </div>
+      </div>
     </div>
+
     <div
       class="transition-transform overlay md:hidden fixed inset-0 bg-black/40 w-full h-full z-10"
     ></div>

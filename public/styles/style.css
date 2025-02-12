@@ -61,6 +61,15 @@ body {
   visibility: visible !important;
   opacity: 1 !important;
 }
+.revrese {
+  flex-direction: row-reverse;
+}
+.modal {
+  transform: translateX(349px);
+}
+.overlay {
+  display: none;
+}
 @layer utilities {
   .child {
     @apply delay-85 duration-200 ease-out;
