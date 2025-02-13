@@ -29,6 +29,20 @@
         />
       </symbol>
       <symbol
+        id="arrow-down-mini"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="size-5"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+          clip-rule="evenodd"
+        />
+      </symbol>
+
+      <symbol
         id="moon"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -276,9 +290,19 @@
           d="m19.5 8.25-7.5 7.5-7.5-7.5"
         />
       </symbol>
+      <symbol
+        id="curve"
+        width="100"
+        height="22"
+        viewBox="0 0 100 22"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M50 0C69 0 81 22 100 22L0 22C18.75 22 31 0 50 0Z" />
+      </symbol>
     </svg>
     <header
-      class="backdrop-blur-[6px] fixed top-9 right-0 left-0 hidden md:flex items-center px-5 py-5 lg:px-10 bg-black/50 md:w-[98%] lg:w-[95%] xl:w-[93%] w-[90%] h-24 mx-auto rounded-3xl"
+      class="z-40 backdrop-blur-[6px] fixed top-9 right-0 left-0 hidden md:flex items-center px-5 py-5 lg:px-10 bg-black/50 md:w-[98%] lg:w-[95%] xl:w-[93%] w-[90%] h-24 mx-auto rounded-3xl"
     >
       <div class="flex items-center justify-between w-full">
         <!--   Logo And Menu  -->
@@ -598,7 +622,56 @@
         </div>
       </div>
     </div>
-
+    <main class="">
+      <section
+        class="home relative @container h-[250px] custom:h-auto custom:aspect-[2/1] md:aspect-auto bg-mobile md:bg-desktop bg-no-repeat bg-cover bg-[center_top]"
+      >
+        <div
+          class="flex h-full overflow-hidden relative @7xl:max-w-7xl flex-col items-end justify-center mx-auto @3xl:min-h-screen px-4"
+        >
+          <div class="text-white md:ml-30 sm:ml-10">
+            <h2
+              class="font-Morabba-Bold text-2xl @3xl:text-6xl mb-0.5 @3xl:mb-2"
+            >
+              قهوه عربیکا تانزانیا
+            </h2>
+            <span class="font-Morabba-Light text-xl @3xl:text-5xl">
+              یک فنجان بالانس!
+            </span>
+            <span
+              class="block w-[100px] h-px @3xl:h-0.5 bg-orange-300 my-3 @3xl:my-8"
+            ></span>
+            <p
+              class="max-w-[201px] text-xs @3xl:text-2xl @3xl:max-w-[460px] leading-relaxed"
+            >
+              قطعا نام آشنای عربیکا را شنیده‌اید، عربیکا یکی از گونه‌های قهوه
+              است که در نواحی مختلف کمربند قهوه کشت می‌شود.
+            </p>
+          </div>
+          <!--        Circles-->
+          <div class="circle circle--lg circleMain translate-y-24 animation">
+            <div class="circle circle--md animation">
+              <div class="circle circle--sm animation"></div>
+            </div>
+          </div>
+        </div>
+        <!--  Curve   -->
+        <svg
+          class="absolute mx-auto sm:inline-block hidden -bottom-[3px] right-0 left-0 text-gray-100 dark:text-zinc-800 w-25 h-6"
+        >
+          <use href="#curve"></use>
+        </svg>
+        <svg
+          class="border-2 sm:inline-block hidden dark:text-white text-zinc-700 rounded-full border-orange-300 absolute mx-auto -bottom-[12px] right-0 left-0"
+          width="30px"
+          height="30px"
+        >
+          <use class="" href="#arrow-down-mini"></use>
+        </svg>
+        <!--  Circle   -->
+      </section>
+      <section class="product"></section>
+    </main>
     <div
       class="transition-transform overlay md:hidden fixed inset-0 bg-black/40 w-full h-full z-10"
     ></div>

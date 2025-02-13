@@ -44,9 +44,6 @@
 }
 @custom-variant dark (&:where(.dark, .dark *));
 
-body {
-  background-image: url("../public/images/background-image/headerBgDesktop.png");
-}
 .nigga {
   opacity: 0 !important;
   visibility: hidden !important;
@@ -81,11 +78,46 @@ body {
     @apply text-orange-300;
   }
 }
-.hight {
+@layer components {
+  .circleMain {
+    @apply absolute right-0 bottom-0 left-0 mx-auto;
+  }
+  .circle {
+    @apply sm:flex hidden items-center justify-center border-t border-r  rotate-3 rounded-full;
+  }
+  .circle--lg {
+    @apply w-[203px] h-[203px]    border-white/35;
+  }
+  .circle--md {
+    @apply w-[145px] h-[145px]   border-white/45;
+  }
+  .circle--sm {
+    @apply w-[95px] h-[95px]   border-white/65;
+  }
+}
+.animation {
+  animation: inifiny-animation infinite 2.5s ease-in-out forwards;
+}
+@keyframes inifiny-animation {
+  0% {
+    rotate: 0deg;
+  }
+  40% {
+    rotate: 180deg;
+  }
+  80% {
+    rotate: 20deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
 }
 
 @theme {
+  --background-image-desktop: url("../public/images/background-image/headerBgDesktop.webp");
+  --background-image-mobile: url("../public/images/background-image/headerBgMobile.webp");
   --breakpoint-5xl: 72rem !important;
+  --breakpoint-custom: 30rem !important;
   /* For Light And Dark Mode */
   /*Custom Colors*/
   --color-brown-100: #ece0d1;
@@ -105,5 +137,7 @@ body {
   --font-Morabba-Bold: "Morabba Bold";
   /*Letter Spacing Custom*/
   --tracking-1: -0.0065em;
+  /*Background Image Custom*/
+
   /* ... */
 }
