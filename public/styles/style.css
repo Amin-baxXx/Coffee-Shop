@@ -94,6 +94,18 @@
   .circle--sm {
     @apply w-[95px] h-[95px]   border-white/65;
   }
+  .section-title {
+    @apply font-Morabba-Medium text-2xl md:text-5xl text-zinc-700 dark:text-white;
+  }
+  .section-subtitle {
+    @apply inline-block font-Morabba-Light text-lg  md:text-3xl text-zinc-700 dark:text-white mt-0.5 md:mt-2.5;
+  }
+  .section-link {
+    @apply flex items-center md:gap-x-1 font-Dana text-base  md:text-xl text-orange-300 transition-colors hover:bg-orange-300/20 h-10 pr-3 pl-1 rounded-md tracking-tighter;
+  }
+  .container {
+    @apply p-2.5  lg:p-4 mx-auto;
+  }
 }
 .animation {
   animation: inifiny-animation infinite 2.5s ease-in-out forwards;
@@ -112,7 +124,45 @@
     rotate: 0deg;
   }
 }
+@media screen and (min-width: 1024px) {
+  html.dark {
+    .product {
+      background-image: url("../public/images/background-image/body-bg.png");
+    }
+  }
+  .product {
+    background: linear-gradient(
+        rgba(243, 244, 246, 0.65),
+        rgba(243, 244, 246, 0.65)
+      ),
+      url("../public/images/background-image/body-bg.png");
+    background-repeat: no-repeat;
+  }
+}
+.category-banner__item1 {
+  @apply flex flex-col items-start pr-12 md:h-[248px] h-[182px] justify-center bg-zinc-700 rounded-2xl;
 
+  background: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0.6) 33.85%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    url("../public/images/CoffeeShop-Files/categories/category-left.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.category-banner__item2 {
+  @apply flex flex-col items-start pr-12 md:h-[248px] h-[182px] justify-center bg-zinc-700 rounded-2xl;
+  background-size: cover;
+
+  background: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0.6) 33.85%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    url("../public/images/CoffeeShop-Files/categories/category-right.jpg");
+  background-repeat: no-repeat;
+}
 @theme {
   --background-image-desktop: url("../public/images/background-image/headerBgDesktop.webp");
   --background-image-mobile: url("../public/images/background-image/headerBgMobile.webp");
