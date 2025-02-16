@@ -1,5 +1,6 @@
 "use strict";
 // Speggati Codes😎
+
 const darkKey = document.querySelectorAll(".dark-mode");
 const clicker = document.querySelector(".clicker");
 const closeIcon = document.querySelector(".close-icon");
@@ -133,6 +134,7 @@ openSubMenu.addEventListener("click", () => {
     subMenu.style.paddingBottom = "0px";
   }
 });
-// group-hover:gap-y-5
-// group-hover:p-8
-// group-hover:pt-5
+
+// import Swiper from "../node_modules/swiper/swiper-bundle.js";
+// // import Swiper styles
+// import "../node_modules/swiper/swiper-bundle.css";

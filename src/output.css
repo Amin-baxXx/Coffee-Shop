@@ -637,9 +637,6 @@
   .my-3 {
     margin-block: calc(var(--spacing) * 3);
   }
-  .my-20 {
-    margin-block: calc(var(--spacing) * 20);
-  }
   .mt-0 {
     margin-top: calc(var(--spacing) * 0);
   }
@@ -744,6 +741,9 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -774,6 +774,9 @@
   .h-\[250px\] {
     height: 250px;
   }
+  .h-\[273px\] {
+    height: 273px;
+  }
   .h-full {
     height: 100%;
   }
@@ -794,6 +797,9 @@
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
+  }
+  .w-9 {
+    width: calc(var(--spacing) * 9);
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
@@ -854,6 +860,9 @@
     --tw-scale-y: 0%;
     scale: var(--tw-scale-x) var(--tw-scale-y);
   }
+  .rotate-180 {
+    rotate: 180deg;
+  }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
@@ -866,8 +875,8 @@
   .grid-cols-\[repeat\(3\,_minmax\(0\,_1fr\)\)\] {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  .grid-cols-\[repeat\(auto-fit\,_minmax\(172px\,200px\)\)\] {
-    grid-template-columns: repeat(auto-fit, minmax(172px,200px));
+  .grid-cols-\[repeat\(auto-fit\,_minmax\(172px\,220px\)\)\] {
+    grid-template-columns: repeat(auto-fit, minmax(172px,220px));
   }
   .grid-cols-\[repeat\(auto-fit\,_minmax\(172px\,600px\)\)\] {
     grid-template-columns: repeat(auto-fit, minmax(172px,600px));
@@ -901,9 +910,6 @@
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
-  }
-  .gap-\[65px\] {
-    gap: 65px;
   }
   .gap-x-1 {
     column-gap: calc(var(--spacing) * 1);
@@ -1281,6 +1287,13 @@
       }
     }
   }
+  .hover\:bg-zinc-700\/20 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, var(--color-zinc-700) 20%, transparent);
+      }
+    }
+  }
   .hover\:text-orange-300 {
     &:hover {
       @media (hover: hover) {
@@ -1313,6 +1326,21 @@
   .sm\:inline-block {
     @media (width >= 40rem) {
       display: inline-block;
+    }
+  }
+  .sm\:h-\[367px\] {
+    @media (width >= 40rem) {
+      height: 367px;
+    }
+  }
+  .sm\:h-\[467px\] {
+    @media (width >= 40rem) {
+      height: 467px;
+    }
+  }
+  .sm\:grid-cols-\[repeat\(auto-fit\,_minmax\(172px\,250px\)\)\] {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(auto-fit, minmax(172px,250px));
     }
   }
   .md\:my-20 {
@@ -1380,9 +1408,19 @@
       height: calc(var(--spacing) * 7.5);
     }
   }
+  .md\:h-10 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 10);
+    }
+  }
   .md\:h-65 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 65);
+    }
+  }
+  .md\:h-\[467px\] {
+    @media (width >= 48rem) {
+      height: 467px;
     }
   }
   .md\:w-6 {
@@ -1395,24 +1433,19 @@
       width: calc(var(--spacing) * 7);
     }
   }
+  .md\:w-10 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 10);
+    }
+  }
   .md\:w-13\.5 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 13.5);
     }
   }
-  .md\:w-40 {
-    @media (width >= 48rem) {
-      width: calc(var(--spacing) * 40);
-    }
-  }
   .md\:w-45 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 45);
-    }
-  }
-  .md\:w-50 {
-    @media (width >= 48rem) {
-      width: calc(var(--spacing) * 50);
     }
   }
   .md\:w-65 {
@@ -1428,16 +1461,6 @@
   .md\:grid-cols-\[repeat\(auto-fit\,_minmax\(172px\,300px\)\)\] {
     @media (width >= 48rem) {
       grid-template-columns: repeat(auto-fit, minmax(172px,300px));
-    }
-  }
-  .md\:justify-between {
-    @media (width >= 48rem) {
-      justify-content: space-between;
-    }
-  }
-  .md\:justify-center {
-    @media (width >= 48rem) {
-      justify-content: center;
     }
   }
   .md\:gap-\[65px\] {
@@ -1623,6 +1646,24 @@
   .dark\:text-zinc-800 {
     &:where(.dark, .dark *) {
       color: var(--color-zinc-800);
+    }
+  }
+  .dark\:hover\:bg-white\/90 {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: color-mix(in oklab, var(--color-white) 90%, transparent);
+        }
+      }
+    }
+  }
+  .dark\:hover\:text-zinc-700 {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          color: var(--color-zinc-700);
+        }
+      }
     }
   }
 }
