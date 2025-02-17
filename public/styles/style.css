@@ -43,7 +43,37 @@
   font-display: swap;
 }
 @custom-variant dark (&:where(.dark, .dark *));
+html {
+  scroll-behavior: smooth;
+}
+.services {
+  @apply relative;
+}
 
+@media screen and (max-width: 636px) {
+  .services::after,
+  .services::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    margin: auto auto;
+    background: #d1d5db;
+  }
+
+  html.dark .services::before,
+  html.dark .services::after {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .services::after {
+    width: 1px;
+    height: 100%;
+  }
+  .services::before {
+    width: calc(100% - 16px);
+    height: 1px;
+  }
+}
 .nigga {
   opacity: 0 !important;
   visibility: hidden !important;
@@ -144,10 +174,6 @@
 /*  grid-column: 1;*/
 /*  grid-row: 2;*/
 /*}*/
-.grid-point {
-  grid-column: 2;
-  grid-row: 2;
-}
 .category-banner__item1 {
   @apply flex flex-col items-start pr-12 md:h-[248px] h-[182px] justify-center bg-zinc-700 rounded-2xl;
 
@@ -179,6 +205,10 @@
   --breakpoint-custom: 30rem !important;
   --breakpoint-dahbist: 1024px !important;
   --breakpoint-defult: 1100px !important;
+  --breakpoint-blogs: 520px !important;
+  --breakpoint-sisad: 300px !important;
+  --breakpoint-charsad: 400px !important;
+  --breakpoint-charsadpanjah: 450px !important;
   /* For Light And Dark Mode */
   /*Custom Colors*/
   --color-brown-100: #ece0d1;
