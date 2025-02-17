@@ -139,6 +139,15 @@
     background-repeat: no-repeat;
   }
 }
+
+/*.grid-icons {*/
+/*  grid-column: 1;*/
+/*  grid-row: 2;*/
+/*}*/
+.grid-point {
+  grid-column: 2;
+  grid-row: 2;
+}
 .category-banner__item1 {
   @apply flex flex-col items-start pr-12 md:h-[248px] h-[182px] justify-center bg-zinc-700 rounded-2xl;
 
@@ -168,6 +177,8 @@
   --background-image-mobile: url("../public/images/background-image/headerBgMobile.webp");
   --breakpoint-5xl: 72rem !important;
   --breakpoint-custom: 30rem !important;
+  --breakpoint-dahbist: 1024px !important;
+  --breakpoint-defult: 1100px !important;
   /* For Light And Dark Mode */
   /*Custom Colors*/
   --color-brown-100: #ece0d1;
