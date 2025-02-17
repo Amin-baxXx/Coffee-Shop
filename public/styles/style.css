@@ -205,6 +205,8 @@ html {
   --breakpoint-custom: 30rem !important;
   --breakpoint-dahbist: 1024px !important;
   --breakpoint-defult: 1100px !important;
+  --breakpoint-footerfor: 1250px !important;
+  --breakpoint-footersix: 1600px !important;
   --breakpoint-blogs: 520px !important;
   --breakpoint-sisad: 300px !important;
   --breakpoint-charsad: 400px !important;
